@@ -25,7 +25,7 @@ class XibOtherTableViewCell: UITableViewCell {
     }
 
     func setupCell(text: String){
-        lbCell.text = "asdasds"
+        lbCell.text = text
     }
     
 }

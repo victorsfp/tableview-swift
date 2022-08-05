@@ -7,7 +7,14 @@
 
 import UIKit
 
+enum XibTableViewCells {
+    case header
+    case other
+}
+
 class XibViewController: UIViewController {
+    
+    private var rows = [XibTableViewCells]()
 
     //MARK: - COMPONENTS VIEW CODE
     private lazy var tableview:UITableView = {
@@ -31,7 +38,10 @@ class XibViewController: UIViewController {
         view.addSubview(tableview)
         
         tableview.register(UINib(nibName: "XibHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "XibHeaderTableViewCell")
+        rows.append(.header)
+        
         tableview.register(UINib(nibName: "XibOtherTableViewCell", bundle: nil), forCellReuseIdentifier: "XibOtherTableViewCell")
+
         
         NSLayoutConstraint.activate([
             tableview.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
@@ -55,19 +65,20 @@ extension XibViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.row == 0){
-            guard let cell = tableview.dequeueReusableCell(withIdentifier: "XibHeaderTableViewCell") as? XibHeaderTableViewCell else {  return UITableViewCell() }
-            
-            cell.setupCell(with: XibHeaderModel(name: "Victor", agCc: "test", description: "descricao"))
-            
-            return cell
-        }else{
-            guard let cell = tableview.dequeueReusableCell(withIdentifier: "XibOtherTableViewCell") as? XibOtherTableViewCell else {  return UITableViewCell() }
-
-            cell.setupCell(text: "Celula")
-
-            return cell
+        let type: XibTableViewCells = rows.indices.contains(indexPath.row) ? rows[indexPath.row] : .other
+        
+       
+        switch type {
+            case .header:
+                guard let cell = tableview.dequeueReusableCell(withIdentifier: "XibHeaderTableViewCell") as? XibHeaderTableViewCell else {  return UITableViewCell() }
+                cell.setupCell(with: XibHeaderModel(name: "Olá, Victor Feitosa", agCc: "Ag 000\(indexPath.row + 1) Cc 00000000-\(indexPath.row + 1)", description: "descricao"))
+                return cell
+            case .other:
+                guard let cell = tableview.dequeueReusableCell(withIdentifier: "XibOtherTableViewCell") as? XibOtherTableViewCell else {  return UITableViewCell() }
+                cell.setupCell(text: "Celula \(indexPath.row)")
+                return cell
         }
+        
     }
     
 }

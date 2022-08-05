@@ -17,9 +17,9 @@ class XibHeaderTableViewCell: UITableViewCell {
     
     public var identifier: String = "XibHeaderTableViewCell"
 
+    @IBOutlet weak var viDescription: UIView!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbAgCc: UILabel!
-    @IBOutlet weak var lbMyText: UILabel!
     
     
     override func awakeFromNib() {
@@ -36,8 +36,8 @@ class XibHeaderTableViewCell: UITableViewCell {
     
     //MARK: - SETUP
     public func setupCell(with model: XibHeaderModel){
+        viDescription.layer.cornerRadius = 10
         lbName.text = model.name
         lbAgCc.text = model.agCc
-        lbMyText.text = (model.description != nil) ? model.description : "Veio em branco"
     }
 }
