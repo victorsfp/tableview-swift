@@ -9,6 +9,7 @@ import UIKit
 
 enum XibTableViewCells {
     case header
+    case carousel
     case other
 }
 
@@ -39,6 +40,9 @@ class XibViewController: UIViewController {
         
         tableview.register(UINib(nibName: "XibHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "XibHeaderTableViewCell")
         rows.append(.header)
+        
+        tableview.register(UINib(nibName: "CarouselTableViewCell", bundle: nil), forCellReuseIdentifier: "CarouselTableViewCell")
+        rows.append(.carousel)
         
         tableview.register(UINib(nibName: "XibOtherTableViewCell", bundle: nil), forCellReuseIdentifier: "XibOtherTableViewCell")
 
@@ -72,6 +76,11 @@ extension XibViewController: UITableViewDelegate, UITableViewDataSource {
             case .header:
                 guard let cell = tableview.dequeueReusableCell(withIdentifier: "XibHeaderTableViewCell") as? XibHeaderTableViewCell else {  return UITableViewCell() }
                 cell.setupCell(with: XibHeaderModel(name: "Olá, Victor Feitosa", agCc: "Ag 000\(indexPath.row + 1) Cc 00000000-\(indexPath.row + 1)", description: "descricao"))
+                cell.selectionStyle = .none
+                return cell
+            case .carousel:
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarouselTableViewCell") as? CarouselTableViewCell else { return UITableViewCell() }
+                cell.selectionStyle = .none
                 return cell
             case .other:
                 guard let cell = tableview.dequeueReusableCell(withIdentifier: "XibOtherTableViewCell") as? XibOtherTableViewCell else {  return UITableViewCell() }

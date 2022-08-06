@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FD4A81C289CC5F800CA5D3F /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD4A81B289CC5F800CA5D3F /* CarouselTableViewCell.swift */; };
+		0FD4A81E289CC60600CA5D3F /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD4A81D289CC60600CA5D3F /* CarouselTableViewCell.xib */; };
+		0FD4A826289CCD5100CA5D3F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD4A825289CCD5100CA5D3F /* CardCollectionViewCell.swift */; };
+		0FD4A828289CCD6E00CA5D3F /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD4A827289CCD6E00CA5D3F /* CardCollectionViewCell.xib */; };
 		84582C352899EDB300CE481D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582C342899EDB300CE481D /* AppDelegate.swift */; };
 		84582C372899EDB300CE481D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582C362899EDB300CE481D /* SceneDelegate.swift */; };
 		84582C392899EDB300CE481D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582C382899EDB300CE481D /* ViewController.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FD4A81B289CC5F800CA5D3F /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
+		0FD4A81D289CC60600CA5D3F /* CarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselTableViewCell.xib; sourceTree = "<group>"; };
+		0FD4A825289CCD5100CA5D3F /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FD4A827289CCD6E00CA5D3F /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		84582C312899EDB300CE481D /* tableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84582C342899EDB300CE481D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84582C362899EDB300CE481D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FD4A81A289CC5BC00CA5D3F /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				0FD4A81F289CC72800CA5D3F /* Card */,
+				0FD4A81B289CC5F800CA5D3F /* CarouselTableViewCell.swift */,
+				0FD4A81D289CC60600CA5D3F /* CarouselTableViewCell.xib */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		0FD4A81F289CC72800CA5D3F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				0FD4A825289CCD5100CA5D3F /* CardCollectionViewCell.swift */,
+				0FD4A827289CCD6E00CA5D3F /* CardCollectionViewCell.xib */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		84582C282899EDB300CE481D = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				84582C4A2899F01F00CE481D /* XibViewController.swift */,
+				0FD4A81A289CC5BC00CA5D3F /* Carousel */,
 				84582C512899F69C00CE481D /* OtherCell */,
 				84582C4C2899F17400CE481D /* Header */,
 			);
@@ -171,7 +199,9 @@
 			files = (
 				84582C4E2899F19E00CE481D /* XibHeaderTableViewCell.xib in Resources */,
 				84582C412899EDB500CE481D /* LaunchScreen.storyboard in Resources */,
+				0FD4A81E289CC60600CA5D3F /* CarouselTableViewCell.xib in Resources */,
 				84582C552899F6C900CE481D /* XibOtherTableViewCell.xib in Resources */,
+				0FD4A828289CCD6E00CA5D3F /* CardCollectionViewCell.xib in Resources */,
 				84582C3E2899EDB500CE481D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD4A826289CCD5100CA5D3F /* CardCollectionViewCell.swift in Sources */,
+				0FD4A81C289CC5F800CA5D3F /* CarouselTableViewCell.swift in Sources */,
 				84582C502899F4A000CE481D /* XibHeaderTableViewCell.swift in Sources */,
 				84582C4B2899F01F00CE481D /* XibViewController.swift in Sources */,
 				84582C392899EDB300CE481D /* ViewController.swift in Sources */,

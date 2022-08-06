@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="CyY-pS-WRx" customClass="CardViewController" customModule="tableview" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="tRu-po-Ehc">
+                <rect key="frame" x="0.0" y="0.0" width="772" height="170"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discord" translatesAutoresizingMaskIntoConstraints="NO" id="JBN-2o-VUP">
+                        <rect key="frame" x="10" y="10" width="160" height="136"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="nH9-eq-vnN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yg-rT-0mJ">
+                        <rect key="frame" x="180" y="54" width="582" height="72"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="opV-Rr-R3l"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="JBN-2o-VUP" firstAttribute="leading" secondItem="opV-Rr-R3l" secondAttribute="leading" constant="10" id="A0y-xp-99h"/>
+                    <constraint firstItem="JBN-2o-VUP" firstAttribute="top" secondItem="tRu-po-Ehc" secondAttribute="top" constant="10" id="DbT-qK-b8f"/>
+                    <constraint firstItem="opV-Rr-R3l" firstAttribute="trailing" secondItem="0yg-rT-0mJ" secondAttribute="trailing" constant="10" id="Mft-Fa-xSn"/>
+                    <constraint firstItem="0yg-rT-0mJ" firstAttribute="leading" secondItem="JBN-2o-VUP" secondAttribute="trailing" constant="10" id="Q1Z-4k-CeE"/>
+                    <constraint firstItem="opV-Rr-R3l" firstAttribute="bottom" secondItem="0yg-rT-0mJ" secondAttribute="bottom" constant="10" id="Xxk-BZ-QgO"/>
+                    <constraint firstItem="0yg-rT-0mJ" firstAttribute="top" secondItem="opV-Rr-R3l" secondAttribute="top" constant="10" id="nO7-3i-3em"/>
+                    <constraint firstItem="JBN-2o-VUP" firstAttribute="bottom" secondItem="opV-Rr-R3l" secondAttribute="bottom" constant="10" id="xCS-Jg-gX6"/>
+                </constraints>
+            </view>
+            <size key="freeformSize" width="772" height="170"/>
+            <connections>
+                <outlet property="ivIcon" destination="JBN-2o-VUP" id="MRD-Ab-mIR"/>
+                <outlet property="lbText" destination="0yg-rT-0mJ" id="FbH-ev-lSz"/>
+            </connections>
+            <point key="canvasLocation" x="-285.50724637681162" y="89.0625"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="discord" width="920" height="903"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

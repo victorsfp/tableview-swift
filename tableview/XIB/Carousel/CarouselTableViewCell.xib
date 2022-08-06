@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarouselTableViewCell" rowHeight="216" id="LTK-6t-RDK" customClass="CarouselTableViewCell" customModule="tableview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="540" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LTK-6t-RDK" id="0JY-41-r2q">
+                <rect key="frame" x="0.0" y="0.0" width="540" height="216"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="teD-wN-03O">
+                        <rect key="frame" x="16" y="0.0" width="508" height="170"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="6Sx-xF-pIz"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wgg-Pi-gUJ">
+                            <size key="itemSize" width="128" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PRw-Bt-wQ0">
+                        <rect key="frame" x="16" y="180" width="508" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ahC-BZ-60W"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" systemColor="systemGray4Color"/>
+                        <color key="currentPageIndicatorTintColor" systemColor="systemRedColor"/>
+                        <connections>
+                            <action selector="pageControlChanged:" destination="LTK-6t-RDK" eventType="valueChanged" id="gz9-Nu-tOr"/>
+                        </connections>
+                    </pageControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PRw-Bt-wQ0" firstAttribute="leading" secondItem="0JY-41-r2q" secondAttribute="leading" constant="16" id="Jfh-RC-rRP"/>
+                    <constraint firstAttribute="trailing" secondItem="teD-wN-03O" secondAttribute="trailing" constant="16" id="S8T-Wr-taI"/>
+                    <constraint firstItem="teD-wN-03O" firstAttribute="leading" secondItem="0JY-41-r2q" secondAttribute="leading" constant="16" id="fA4-zm-SfM"/>
+                    <constraint firstItem="PRw-Bt-wQ0" firstAttribute="top" secondItem="teD-wN-03O" secondAttribute="bottom" constant="10" id="jt3-d3-mNo"/>
+                    <constraint firstItem="teD-wN-03O" firstAttribute="top" secondItem="0JY-41-r2q" secondAttribute="top" id="o33-VG-Raa"/>
+                    <constraint firstAttribute="bottom" secondItem="PRw-Bt-wQ0" secondAttribute="bottom" constant="16" id="q7c-8i-8KL"/>
+                    <constraint firstAttribute="trailing" secondItem="PRw-Bt-wQ0" secondAttribute="trailing" constant="16" id="zwW-S3-hm4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="teD-wN-03O" id="gnW-uO-xZD"/>
+                <outlet property="pageControl" destination="PRw-Bt-wQ0" id="NbU-uz-6n1"/>
+            </connections>
+            <point key="canvasLocation" x="118.84057971014494" y="120.53571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
